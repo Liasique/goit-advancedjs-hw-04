@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load ="partials/header.html" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search app</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+   <form class="search-form" id="search-form">
+    <div class="search-wrapper">
+      <input
+        class="search-input"
+        type="text"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+      <button class="search-button" type="submit" name="searchBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M15.5 14h-.79l-.28-.27a6.51 6.51 0 10-.7.7l.27.28v.79l5 4.99 1.49-1.49-5-4.99zm-6 0A4.5 4.5 0 1114 9.5 4.5 4.5 0 019.5 14z"></path></svg>
+      </button>
+    </div>
+  </form>
 
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
-
-    <script type="module" src="/main.js"></script>
-  </body>
+  <ul class="js-gallery gallery">
+  </ul>
+  <button type="button" class="js-btn btn mr-bottom" hidden>Load More...</button>
+  <script type="module" src="./app.js"></script>
+</body>
 </html>
